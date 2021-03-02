@@ -49,9 +49,9 @@ echo $ACCESS_KEY
 
 Create a bucket and change the permisions :
 
-<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero-Restic-Minio/blob/main/DocsImages/Createbucket.png" width="700">
+<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero-Restic-Minio/blob/main/DocsImages/Createbucket.png" width="400">
 
-<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero-Restic-Minio/blob/main/DocsImages/MinioPolicy.png" width="700">
+<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero-Restic-Minio/blob/main/DocsImages/MinioPolicy.png" width="400">
 
 
 ## 3)Install Velero with Restic
