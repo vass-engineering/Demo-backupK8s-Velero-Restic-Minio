@@ -57,7 +57,7 @@ Create a bucket and change the permisions :
 
 ## 3)Install Velero with Restic
 
-* Create a file "credentials-velero" with the S3(Noobaa) credential access.
+* Create a file "credentials-velero" with the S3(MinIO) credential access.
 
 ```
 vi credentials-velero
@@ -65,8 +65,8 @@ vi credentials-velero
 
 ```
 [default]
-aws_access_key_id = 8Vv12B5LXXXXXXXXXXXXXXX
-aws_secret_access_key = m0scKSLvhv90XXXXXXXXXXXXXXXXXXXx
+aws_access_key_id = 8VvxxxLXXXXXXXXXXXXXXX
+aws_secret_access_key = m0scxxxx0XXXXXXXXXXXXXXXXXXXx
 ```
 
 
@@ -117,7 +117,7 @@ Annotations:  velero.io/source-cluster-k8s-gitversion=v1.18.9-eks-d1db3c
 Phase:  Completed
 ```
 
-<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero-Restic-Minio/blob/main/DocsImages/BackupMinio.png" width="700">
+<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero-Restic-Minio/blob/main/DocsImages/BackupsMinio.png" width="700">
 
 
 
