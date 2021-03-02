@@ -31,7 +31,7 @@ Example:
 ```
 argocd app create eks-tyc-minio --repo https://github.com/vass-engineering/EKS-TyC-minio.git --revision EKS-TyC-1.0.0 --path minio --dest-server https://kubernetes.default.svc --dest-namespace eks-tyc-minio --project default --values values.yaml --sync-policy automated --auto-prune --self-heal
 ```
-<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero+Restic+Minio/blob/main/DocsImages/ArgoCD.png" width="700">
+<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero-Restic-Minio/blob/main/DocsImages/ArgoCD.png" width="700">
 
 
 Once you have deployed MinIO in one way or the other, access to MinIO console. In order to access to the console you can use the ingress if you enabled to true the ingress parameters in the values.yaml, or you can access using port-fordward. "kubectl port-
@@ -45,14 +45,14 @@ ACCESS_KEY=$(kubectl get secret eks-tyc-minio -o jsonpath="{.data.accesskey}" | 
 echo $ACCESS_KEY
 
 
-<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero+Restic+Minio/blob/main/DocsImages/MinioAccess.png" width="700">
+<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero-Restic-Minio/blob/main/DocsImages/MinioAccess.png" width="700">
 
 
 Create a bucket and change the permisions :
 
-<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero+Restic+Minio/blob/main/DocsImages/Createbucket.png" width="700">
+<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero-Restic-Minio/blob/main/DocsImages/Createbucket.png" width="700">
 
-<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero+Restic+Minio/blob/main/DocsImages/MinioPolicy.png" width="700">
+<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero-Restic-Minio/blob/main/DocsImages/MinioPolicy.png" width="700">
 
 
 ## 3)Install Velero with Restic
@@ -117,7 +117,7 @@ Annotations:  velero.io/source-cluster-k8s-gitversion=v1.18.9-eks-d1db3c
 Phase:  Completed
 ```
 
-<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero+Restic+Minio/blob/main/DocsImages/BackupMinio.png" width="700">
+<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero-Restic-Minio/blob/main/DocsImages/BackupMinio.png" width="700">
 
 
 
@@ -144,9 +144,9 @@ velero backup create eks-tyc-kube-opex-analytics-20022021  --snapshot-volumes=fa
 
 When you backup a PV using Restic, you will see in MinIO, in the bucket the snapshot. Restic will store the differents snapshots from one NameSpace in the folder Snapshots.  
 
-<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero+Restic+Minio/blob/main/DocsImages/MinioRestic.png" width="700">
-<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero+Restic+Minio/blob/main/DocsImages/MinioRestic1.png" width="700">
-<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero+Restic+Minio/blob/main/DocsImages/MinioResticSnapShots.png" width="700">
+<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero-Restic-Minio/blob/main/DocsImages/MinioRestic.png" width="700">
+<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero-Restic-Minio/blob/main/DocsImages/MinioRestic1.png" width="700">
+<img src="https://github.com/vass-engineering/Demo-backupK8s-Velero-Restic-Minio/blob/main/DocsImages/MinioResticSnapShots.png" width="700">
 
 
 * Backup all the cluster.
