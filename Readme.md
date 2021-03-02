@@ -22,9 +22,9 @@
 
 ## 2) Install MinIO
 
-You can deploy MinIO using official documentation from "https://docs.min.io/docs/deploy-minio-on-kubernetes.html", you can deploy using Helm or deploy the Operator.
+Deploy MinIO using official documentation from "https://docs.min.io/docs/deploy-minio-on-kubernetes.html", you can deploy using Helm or deploy the Operator.
 We have deploy MinIO using Helm3 controlling the deploy with ArgoCD.
-If you want to deploy MinIO using Argocd, fork or clone the repositorie "https://github.com/minio/charts", change the values according your requirements, and create the application from ArgoCD. Once you have your repositorie ready create the applitacion in ArgoCD.
+If you want to deploy MinIO using Argocd, fork or clone the repositorie "https://github.com/minio/charts", you should change the values according your requirements. Once you have your repository ready create the applitacion in ArgoCD.
 
 Example:
 
@@ -34,8 +34,7 @@ argocd app create eks-tyc-minio --repo https://github.com/vass-engineering/EKS-T
 <img src="https://github.com/vass-engineering/Demo-backupK8s-Velero-Restic-Minio/blob/main/DocsImages/ArgoCD.png" width="700">
 
 
-Once you have deployed MinIO in one way or the other, access to MinIO console. In order to access to the console you can use the ingress if you enabled to true the ingress parameters in the values.yaml, or you can access using port-fordward. "kubectl port-
-forward <pod-name 9000", in the last case you should access as http://localhost:9000.
+Once you have deployed MinIO in one way or the other, access to MinIO console. In order to access to the console you can use the ingress if you enabled to true the ingress parameters in the values.yaml, or you can access using port-fordward. "kubectl port-forward <pod-name> 9000", in the last case you should access using the next URL: http://localhost:9000.
 
 Obtain the  ACCESS_KEY and SECRET_KEY from the k8s secret created.
 
